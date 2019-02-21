@@ -1,0 +1,31 @@
+<h1>Eat-Da-Burger</h1>
+
+<img src="/assets/css/img/ap,550x550,12x12,1,transparent,t.u5.png" alt="Burger" width="150">
+<br>
+
+<div class="not-devoured">
+{{#each burgers}}
+{{#unless devoured}}
+<input type="text" value="{{inc @index}} {{burger_name}}">
+<button class="devour-burger" data-id="{{id}}" type="button">Devour</button>
+<br>
+<br>
+{{/unless}}
+{{/each}}
+</div>
+
+<div class="devoured clearfix">
+{{#each burgers}}
+{{#if devoured}}
+<input type="text" class="burger-devoured" disabled="disabled" value="{{inc @index}} {{burger_name}}">
+<br>
+<br>
+{{/if}}
+{{/each}}
+</div>
+
+<h3 class="bottom">Enter a burger you want to eat. Click the "Make" button. </h3>
+<div class="form-group">
+  <input type="text" id="burger-name" name="name">
+</div>
+<button id="make-button">Make</button>

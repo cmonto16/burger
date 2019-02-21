@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  background-color: rgb(240, 69, 69);
+  margin: auto;
+  width: 400px;
+}
+
+.not-devoured {
+  float: left;
+}
+
+.devoured {
+  float: right;
+}
+
+.bottom {
+  clear: both;
+}
+
+.burger-devoured {
+  background-color: grey;
+}
